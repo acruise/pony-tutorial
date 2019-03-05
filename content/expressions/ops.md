@@ -83,26 +83,30 @@ Operator   | Method         | Description                     | Note
 `<=`       | le()           | Less than or equal              |
 `>=`       | ge()           | Greater than or equal           |
 `>`        | gt()           | Greater than                    |
-`>~`       | gt_unsafe()    | Unsafe greater than             |
-`+~`       | add_unsafe()   | Unsafe Addition                 |
-`-~`       | sub_unsafe()   | Unsafe Subtraction              |
-`*~`       | mul_unsafe()   | Unsafe Multiplication           |
-`/~`       | div_unsafe()   | Unsafe Division                 |
-`%~`       | rem_unsafe()   | Unsafe Remainder                |
-`%%~`      | mod_unsafe()   | Unsafe Modulo                   | Starting with version `0.26.1`
-`<<~`      | shl_unsafe()   | Unsafe left bit shift           |
-`>>~`      | shr_unsafe()   | Unsafe right bit shift          |
-`==~`      | eq_unsafe()    | Unsafe equality                 |
-`!=~`      | ne_unsafe()    | Unsafe non-equality             |
-`<~`       | lt_unsafe()    | Unsafe less than                |
-`<=~`      | le_unsafe()    | Unsafe less than or equal       |
-`>=~`      | ge_unsafe()    | Unsafe greater than or equal    |
-`+?`       | add_partial()? | Partial Addition                |
-`-?`       | sub_partial()? | Partial Subtraction             |
-`*?`       | mul_partial()? | Partial Multiplication          |
-`/?`       | div_partial()? | Partial Division                |
-`%?`       | rem_partial()? | Partial Remainder               |
-`%%?`      | mod_partial()? | Partial Modulo                  | Starting with version `0.26.1`
+`>~`       | gt_unsafe()    | Unsafe* greater than             |
+`+~`       | add_unsafe()   | Unsafe* Addition                 |
+`-~`       | sub_unsafe()   | Unsafe* Subtraction              |
+`*~`       | mul_unsafe()   | Unsafe* Multiplication           |
+`/~`       | div_unsafe()   | Unsafe* Division                 |
+`%~`       | rem_unsafe()   | Unsafe* Remainder                |
+`%%~`      | mod_unsafe()   | Unsafe* Modulo                   | Starting with version `0.26.1`
+`<<~`      | shl_unsafe()   | Unsafe* left bit shift           |
+`>>~`      | shr_unsafe()   | Unsafe* right bit shift          |
+`==~`      | eq_unsafe()    | Unsafe* equality                 |
+`!=~`      | ne_unsafe()    | Unsafe* non-equality             |
+`<~`       | lt_unsafe()    | Unsafe* less than                |
+`<=~`      | le_unsafe()    | Unsafe* less than or equal       |
+`>=~`      | ge_unsafe()    | Unsafe* greater than or equal    |
+`+?`       | add_partial()? | Partial† Addition                |
+`-?`       | sub_partial()? | Partial† Subtraction             |
+`*?`       | mul_partial()? | Partial† Multiplication          |
+`/?`       | div_partial()? | Partial† Division                |
+`%?`       | rem_partial()? | Partial† Remainder               |
+`%%?`      | mod_partial()? | Partial† Modulo                  | Starting with version `0.26.1`
+
+\* [Unsafe functions](https://tutorial.ponylang.io/expressions/arithmetic.html#unsafe-arithmetic) sacrifice correctness for performance, and may silently overflow, underflow, crash, etc. depending on the parameters you pass.
+
+† [Partial functions](https://tutorial.ponylang.io/expressions/errors.html#partial-functions) are those that are not defined over all arguments, and can throw an error if passed parameters for which the function is undefined.
 
 ---
 
