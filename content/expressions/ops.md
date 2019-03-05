@@ -104,7 +104,8 @@ Operator   | Method         | Description                     | Note
 `%?`       | rem_partial()? | Partial† Remainder               |
 `%%?`      | mod_partial()? | Partial† Modulo                  | Starting with version `0.26.1`
 
-* [Unsafe functions](https://tutorial.ponylang.io/expressions/arithmetic.html#unsafe-arithmetic) sacrifice correctness for performance, and may silently overflow, underflow, crash, etc. depending on the parameters you pass.
+\* [Unsafe functions](https://tutorial.ponylang.io/expressions/arithmetic.html#unsafe-arithmetic) sacrifice correctness for performance, and may silently overflow, underflow, crash, etc. depending on the parameters you pass.
+
 † [Partial functions](https://tutorial.ponylang.io/expressions/errors.html#partial-functions) are those that are not defined over all arguments, and can throw an error if passed parameters for which the function is undefined.
 
 ---
